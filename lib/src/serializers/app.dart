@@ -1,6 +1,6 @@
 import "package:dart_frog_utils/dart_frog_utils.dart";
 
-import "package:dart_webhooks/webhooks.dart";
+import "package:dart_webhooks/dart_webhooks.dart";
 
 const _appKeys = WebhookApp.keys;
 

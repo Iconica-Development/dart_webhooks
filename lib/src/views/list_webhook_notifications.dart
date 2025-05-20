@@ -1,7 +1,6 @@
 import "package:dart_frog/dart_frog.dart";
 import "package:dart_frog_utils/dart_frog_utils.dart";
-
-import "package:dart_webhooks/webhooks.dart";
+import "package:dart_webhooks/dart_webhooks.dart";
 
 /// Function that returns the webhook events list view.
 Future<Response> listWebhookEventsView(

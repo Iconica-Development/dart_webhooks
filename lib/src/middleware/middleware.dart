@@ -1,5 +1,5 @@
 import "package:dart_frog/dart_frog.dart";
-import "package:dart_webhooks/webhooks.dart";
+import "package:dart_webhooks/dart_webhooks.dart";
 import "package:logger/logger.dart";
 
 final _authServiceProvider = provider(

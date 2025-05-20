@@ -6,6 +6,7 @@ export "src/middleware/middleware.dart";
 
 export "src/models/app.dart";
 export "src/models/webhook.dart";
+export "src/models/webhook_event.dart";
 
 export "src/repository/firebase_webhook_repository.dart";
 export "src/repository/mocked_webhook_repository.dart";

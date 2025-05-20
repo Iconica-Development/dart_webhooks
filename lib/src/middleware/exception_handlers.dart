@@ -3,7 +3,7 @@ import "dart:io";
 import "package:dart_frog/dart_frog.dart";
 import "package:dart_frog_utils/dart_frog_utils.dart";
 
-import "package:dart_webhooks/webhooks.dart";
+import "package:dart_webhooks/dart_webhooks.dart";
 
 /// Handles [AppDoesNotExistException]  which is thrown
 /// when the webhook app does not exist.
