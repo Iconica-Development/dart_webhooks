@@ -1,0 +1,27 @@
+name: dart_webhooks
+description: Webhooks, for dart.
+version: 0.0.1
+
+homepage: https://iconica.app
+
+publish_to: https://forgejo.internal.iconica.nl/api/packages/internal/pub
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  dart_api_service:
+    hosted: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
+    version: ^1.0.4
+  dart_frog_utils:
+    hosted: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
+    version: ^1.0.0
+  dart_frog: ^1.2.0
+  logger: ^2.5.0
+  dart_firebase_admin: ^0.4.1
+
+dev_dependencies:
+  test: ^1.15.0
+  flutter_iconica_analysis:
+    hosted: https://forgejo.internal.iconica.nl/api/packages/internal/pub
+    version: ^7.0.0
