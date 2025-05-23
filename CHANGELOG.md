@@ -1,3 +1,7 @@
+## 0.0.4
+
+- Remove autorization from library as this shouldn't be handled by this service.
+
 ## 0.0.3
 
 - WebhookApp keys now doesn't contain duplicate `keys.id`

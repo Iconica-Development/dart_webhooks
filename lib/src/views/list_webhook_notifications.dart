@@ -7,14 +7,10 @@ Future<Response> listWebhookEventsView(
   RequestContext context,
   String appId,
   String webhookId,
-) async {
-  var webhookAuthService = context.read<WebhookAuthService>();
-
-  return methodRequest(
-    requestContext: await webhookAuthService.authenticateApp(context, appId),
-    get: (context) => _listWebhookEvents(context, appId, webhookId),
-  );
-}
+) async =>
+    context.method(
+      get: (context) => _listWebhookEvents(context, appId, webhookId),
+    );
 
 Future<Response> _listWebhookEvents(
   RequestContext context,

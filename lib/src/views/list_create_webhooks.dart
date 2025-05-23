@@ -5,21 +5,17 @@ import "package:dart_frog_utils/dart_frog_utils.dart";
 
 import "package:dart_webhooks/src/models/webhook.dart";
 import "package:dart_webhooks/src/serializers/webhook.dart";
-import "package:dart_webhooks/src/service/webhook_auth_service.dart";
 import "package:dart_webhooks/src/service/webhook_service.dart";
 
 /// Function that returns the list create view for webhooks.
 Future<Response> listCreateWebhookView(
   RequestContext context,
   String appId,
-) async {
-  var webhookAuthService = context.read<WebhookAuthService>();
-  return methodRequest(
-    requestContext: await webhookAuthService.authenticateApp(context, appId),
-    post: (context) => _createWebhook(context, appId),
-    get: (context) => _getWebhooks(context, appId),
-  );
-}
+) async =>
+    context.method(
+      post: (context) => _createWebhook(context, appId),
+      get: (context) => _getWebhooks(context, appId),
+    );
 
 Future<Response> _createWebhook(RequestContext context, String appId) async {
   var service = context.read<WebhookService>();

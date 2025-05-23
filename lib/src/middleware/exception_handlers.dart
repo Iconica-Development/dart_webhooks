@@ -38,17 +38,6 @@ Response webhookTypeNotAllowedExceptionHandler(
       body: {"error": "The webhook type provided is not allowed"},
     );
 
-/// Handles [WebhookAuthenticationFailedException]  which is thrown
-/// authentication fails.
-Response webhookAuthenticationFailedExceptionHandler(
-  RequestContext context,
-  WebhookAuthenticationFailedException exception,
-) =>
-    Response.json(
-      statusCode: HttpStatus.unauthorized,
-      body: {"error": "The given app key is incorrect for this app"},
-    );
-
 /// Handles [WebhookEventForbiddenForAppException]  which is thrown
 /// when the key provided does not grant access to this event type.
 Response webhookEventForbiddenForAppExceptionHandler(
@@ -66,7 +55,6 @@ void registerWebhookExceptionHandlers(ExceptionHandlerMiddleware middleware) {
     ..addExceptionHandler(webhookAppDoesNotExistExceptionHandler)
     ..addExceptionHandler(webhookDoesNotExistExceptionHandler)
     ..addExceptionHandler(webhookTypeNotAllowedExceptionHandler)
-    ..addExceptionHandler(webhookAuthenticationFailedExceptionHandler)
     ..addExceptionHandler(webhookEventForbiddenForAppExceptionHandler);
 }
 

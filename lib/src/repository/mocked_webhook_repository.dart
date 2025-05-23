@@ -25,7 +25,6 @@ class MockedWebhookRepository implements WebhookRepository {
   Future<WebhookApp> getApp(String appId) async => WebhookApp(
         id: appId,
         name: "App",
-        key: "1",
         types: ["test"],
         scopes: ["testscope"],
       );
@@ -58,7 +57,6 @@ class MockedWebhookRepository implements WebhookRepository {
         const WebhookApp(
           id: "1",
           name: "App",
-          key: "1",
           types: ["test"],
           scopes: ["testscope"],
         ),

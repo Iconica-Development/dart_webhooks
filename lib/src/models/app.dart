@@ -6,7 +6,6 @@ class WebhookApp {
   const WebhookApp({
     required this.id,
     required this.name,
-    required this.key,
     required this.types,
     required this.scopes,
   });
@@ -15,7 +14,6 @@ class WebhookApp {
   factory WebhookApp.fromMap(Map<String, dynamic> map) => WebhookApp(
         id: map[keys.id] != null ? map[keys.id] as String : null,
         name: (map[keys.name] ?? "") as String,
-        key: (map[keys.key] ?? "") as String,
         types: List<String>.from(
           (map[keys.types] as List? ?? const <String>[]).whereType<String>(),
         ),
@@ -30,9 +28,6 @@ class WebhookApp {
   /// The webhook app name
   final String name;
 
-  /// _key_ is used for authorization.
-  final String key;
-
   /// The webhook app allowed types
   final List<String> types;
 
@@ -43,7 +38,6 @@ class WebhookApp {
   static const keys = (
     id: "id",
     name: "name",
-    key: "key",
     types: "types",
     scopes: "scopes",
   );
@@ -58,7 +52,6 @@ class WebhookApp {
   Map<String, dynamic> toMap() => {
         keys.id: id,
         keys.name: name,
-        keys.key: key,
         keys.types: types,
         keys.scopes: scopes,
       };
@@ -67,14 +60,12 @@ class WebhookApp {
   WebhookApp copyWith({
     String? id,
     String? name,
-    String? key,
     List<String>? types,
     List<String>? scopes,
   }) =>
       WebhookApp(
         id: id ?? this.id,
         name: name ?? this.name,
-        key: key ?? this.key,
         types: types ?? this.types,
         scopes: scopes ?? this.scopes,
       );

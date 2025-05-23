@@ -15,7 +15,6 @@ export "src/repository/webhook_repository.dart";
 export "src/serializers/app.dart";
 export "src/serializers/webhook.dart";
 
-export "src/service/webhook_auth_service.dart";
 export "src/service/webhook_service.dart";
 
 export "src/views/create_app.dart";
