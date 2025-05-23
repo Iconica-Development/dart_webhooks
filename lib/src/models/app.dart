@@ -60,7 +60,7 @@ class WebhookApp {
         keys.name: name,
         keys.key: key,
         keys.types: types,
-        keys.id: scopes,
+        keys.scopes: scopes,
       };
 
   /// Create a new [WebhookApp] containing the old and updates values.
